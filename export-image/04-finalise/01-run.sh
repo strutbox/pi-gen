@@ -78,10 +78,4 @@ unmount_image ${IMG_FILE}
 
 mkdir -p ${DEPLOY_DIR}
 
-rm -f ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip
-
-pushd ${STAGE_WORK_DIR} > /dev/null
-zip ${DEPLOY_DIR}/image_${IMG_DATE}-${IMG_NAME}${IMG_SUFFIX}.zip $(basename ${IMG_FILE})
-popd > /dev/null
-
-cp "$INFO_FILE" "$DEPLOY_DIR"
+cp "$INFO_FILE" "$IMG_FILE" "$DEPLOY_DIR"
