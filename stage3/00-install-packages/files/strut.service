@@ -1,9 +1,13 @@
 [Unit]
 Description=STRUT
+After=bluetooth.target
+Requires=bluetooth.target
 
 [Service]
 ExecStart=/usr/bin/strut
 Restart=always
+RestartSec=3
+StartLimitIntervalSec=0
 
 [Install]
 WantedBy=multi-user.target
