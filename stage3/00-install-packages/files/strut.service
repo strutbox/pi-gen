@@ -7,7 +7,6 @@ Requires=bluetooth.target
 ExecStart=/usr/bin/strut
 Restart=always
 RestartSec=3
-StartLimitIntervalSec=0
 
 [Install]
 WantedBy=multi-user.target
